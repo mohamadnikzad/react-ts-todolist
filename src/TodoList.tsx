@@ -5,12 +5,14 @@ interface IProps {
   todos: ITodo[];
   HandleRemove: (id: number) => void;
   HandleDoneTodo: (id: number) => void;
+  HandleEditTodo: (id: number) => void;
 }
 
 const TodoList: React.FC<IProps> = ({
   todos,
   HandleRemove,
   HandleDoneTodo,
+  HandleEditTodo,
 }) => {
   const todoList = todos.map((todo) => (
     <TD
@@ -18,6 +20,7 @@ const TodoList: React.FC<IProps> = ({
       todo={todo}
       HandleRemove={HandleRemove}
       HandleDoneTodo={HandleDoneTodo}
+      HandleEditTodo={HandleEditTodo}
     />
   ));
   return (
