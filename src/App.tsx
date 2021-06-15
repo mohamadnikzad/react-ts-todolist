@@ -2,12 +2,6 @@ import React, { useState } from "react";
 import { ITodo } from "./Interfaces";
 import TodoList from "./TodoList";
 
-// interface Todo {
-//   id: number;
-//   text: string;
-//   isDone: boolean;
-// }
-
 const App: React.FC = () => {
   const [text, setText] = useState<string>("");
   const [todos, setTodos] = useState<ITodo[]>([]);

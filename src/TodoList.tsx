@@ -1,5 +1,5 @@
 import { ITodo } from "./Interfaces";
-import TD from "./Todo";
+import TodoItem from "./Todo";
 
 interface IProps {
   todos: ITodo[];
@@ -15,7 +15,7 @@ const TodoList: React.FC<IProps> = ({
   HandleEditTodo,
 }) => {
   const todoList = todos.map((todo) => (
-    <TD
+    <TodoItem
       key={todo.id}
       todo={todo}
       HandleRemove={HandleRemove}
